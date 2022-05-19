@@ -1,2 +1,3 @@
-/Exercise01/out/
-/Exercise02/out/
+/Exercise01/out/**/*
+/Exercise02/out/**/*
+/out/**/*
