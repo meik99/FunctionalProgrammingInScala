@@ -10,10 +10,10 @@ trait FList[+A] {
       case _ => FNil[B]()
 }
 
-case class FNil[A]() extends FList[A]:
+case class FNil[+A]() extends FList[A]:
   override def size: Int = 0
   override def isEmpty: Boolean = true
 
-case class FCons[A](head: A, tail: FList[A]) extends FList[A]:
+case class FCons[+A](head: A, tail: FList[A]) extends FList[A]:
   override def size: Int = 1 + tail.size
   override def isEmpty: Boolean = false
