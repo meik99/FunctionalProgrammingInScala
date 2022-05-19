@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exercise01/Exercise01.iml" filepath="$PROJECT_DIR$/Exercise01/Exercise01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise02/Exercise02.iml" filepath="$PROJECT_DIR$/Exercise02/Exercise02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FunctionalProgrammingInScala.iml" filepath="$PROJECT_DIR$/.idea/FunctionalProgrammingInScala.iml" />
+    </modules>
+  </component>
+</project>
