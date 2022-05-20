@@ -18,7 +18,7 @@ trait FList[+A] {
   def find(predicate: A => Boolean): Option[A] =
     this match
       case FCons(head, tail) =>
-        if predicate(head) then Option(head) else tail.find(predicate)
+        if predicate(head) then Some(head) else tail.find(predicate)
       case _ => Option.empty
 
   def all(predicate: A => Boolean): Boolean =
