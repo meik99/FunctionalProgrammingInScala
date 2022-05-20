@@ -1,6 +1,7 @@
 package flist
 
 import org.scalatest.funsuite.AnyFunSuite
+import person.{Person, Professor, Student}
 
 class FListSuite extends AnyFunSuite:
   test("list returns correct size") {
@@ -17,6 +18,18 @@ class FListSuite extends AnyFunSuite:
     val emptyList = FNil()
 
     assert(emptyList.isEmpty)
+  }
+
+  test("list is co-variant") {
+    val list: FList[Person] = FCons(
+      Student(name = "Student Name", study = "CS"),
+      FCons(
+        Professor(name = "Professor Name", research = "Software Engineering"),
+        FNil()
+      ))
+
+    assert(list.find(p => p.name == "Student Name").isDefined)
+    assert(list.find(p => p.name == "Professor Name").isDefined)
   }
 
   test("map") {
