@@ -1,7 +1,7 @@
 package option
 
 import java.util.Scanner
-import option.Util._
+import option.Util.*
 
 object Option5_for {
 
@@ -11,17 +11,29 @@ object Option5_for {
     val bds = Map("x"-> 9, "y" -> 4, "z" -> 0)
 
     // a) x / y
-
+    println(for(
+      x <- bds.get("x");
+      y <- bds.get("y")
+    ) yield option(x / y))
 
     // b) x / z
-
+    println(for(
+      x <- bds.get("x");
+      z <- bds.get("z")
+    ) yield option(x / z))
 
     // c) x / u
+    println(for(
+      x <- bds.get("x");
+      u <- bds.get("u")
+    ) yield option(x / u))
 
 
     // d) x / (y * z)
-
-
+    println(for(
+      x <- bds.get("x");
+      y <- bds.get("y");
+      z <- bds.get("z")
+    ) yield option(x / (y * z)))
   }
-
 }
