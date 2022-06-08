@@ -87,9 +87,9 @@ object RandDemoApp :
     val (i1, rng1) = randInt(rng)
     println(i1)
 
-    for (n <- 0 to 1000) {
-      val (c, rng2): (Char, RNG) = letter(BasicRNG(n))
-      println(c)
+    for (n <- 5 to 100) {
+      val result = word(n)(BasicRNG(n))
+      println(result._1)
     }
 
   }
