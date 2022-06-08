@@ -8,7 +8,7 @@ import scala.util.parsing.input.{CharSequenceReader, PagedSeqReader}
 
 object ExprParser extends JavaTokenParsers {
 
-  // I have no idea where to even begin
+  // I have literally no idea where to even begin
   def expr : Parser[Expr] = ???
 }
 
