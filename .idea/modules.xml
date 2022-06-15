@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Exercise04/Exercise04.iml" filepath="$PROJECT_DIR$/Exercise04/Exercise04.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercise05/Exercise05.iml" filepath="$PROJECT_DIR$/Exercise05/Exercise05.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercise06/Exercise06.iml" filepath="$PROJECT_DIR$/Exercise06/Exercise06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise09/Exercise09.iml" filepath="$PROJECT_DIR$/Exercise09/Exercise09.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/FunctionalProgrammingInScala.iml" filepath="$PROJECT_DIR$/.idea/FunctionalProgrammingInScala.iml" />
     </modules>
   </component>
