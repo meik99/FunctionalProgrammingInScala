@@ -58,3 +58,116 @@ Example of slide II. p. 47
 
 * Co-variant have type-safe returns
 * Contra-variant have type-safe inputs
+
+# Functional programming fundamentals
+
+* Functions have no state and no side effect
+* Same input = same output
+* Rand takes seed
+* Recursion instead of loops
+
++ Referential transperency
++ The value of an expression is only dependent on the values of the subexpression
++ Advantages
+    +  Parallel execution
+    +  Lazy evalutation
+    +  Testability because of independence
+    +  Composability
+    +  Memoization, once computed, value can be cached
+
+* Scala optimizes tail recursive functions
+* Constant stack space
+* The result of the recursive call is the result of the call, therefore, the previous stack is not needed
+
++ lambdas are literals for creating function objects
++ consist of arguments and function body
++ Type of function can be any interface with a single abstrac method
+    + SAM
+    + SAM can be functional interfaces
++ Scala can have up to 22 parameters
+
+* Closure is a value storing a function with an environment
+* Functions can contain values of free variables (Java)
+    * Only final variables allowed
+* Functions can have access to storage location (Scala)
+    * Either immutable outside of closure and mutable inside = pure closure
+    * Or captured on heap and mutable = impure closure
+
++ Higher order functions take functions as parameters or return functions
++ Java -> use site variance
+    + Variance defined in parameter
++ Scala -> no use site variance needeed
+    + declaration-site variance used
+
+# Functional data structures
+
+* Immutable
+* Algebraic data types
+    * allows pattern matching
+* Similar properties to value types
+    * Operations create new data objects
+
+## Algebraic data types
+
+* Tagged records
+* Variants of records / unions
+* Immutable
+* Tags identify value variants
+* No subtyping
+
+__In Scala__
+* Case classes implement ADTs with classes and inheritance
+* Class name is tag
+* Class parameters are fields
+* Abstract base type has case classes as subtypes => variants
+* Class parameters are public
+* equal, hashCode, toString based on class parameters
+* no subtypes of case classes
+* Enums are short way of defining ADTs
+
+__In Java__
+* basically the same but called records
+
+## Pattern matching
+
+* Checking for type
+* testing pattern for equality
+* binding pattern to bind variables to values
+
+## Basic ADTS
+
+* Tuples
+    * Are mathematical tuples
+* Option
+    * Can have Some value
+    * Can have None value
+    * Checked using pattern matching
+
+## Functional collections
+
+* List, Set, Maps are immutable
+* Operations create new values
+
+## Persistend data structures
+
+* Minimal copying, maximal reuse
+* New value reuses old values
+* Easy to use, reliable and thread safe
+* Causes memory and run time overhead
+* Slides IV, p.47, p.50, p.51, p.52
+
+# Functional exception handling
+
+* Option
+* Try
+    * Success with value
+    * Failure with exception
+* Optional (Java)
+
++ Flatmap to chain optionals
+
+* Parameters with call-by-name
+* Passed unevaluated
+* No function objects
+
+# Functional composition
