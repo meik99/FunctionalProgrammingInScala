@@ -171,3 +171,11 @@ __In Java__
 * No function objects
 
 # Functional composition
+
+* Function composition operators take functions as arguments and return functions as result
+* Create more complex functions from simpler functions
+* Creation of programs by programs
+* combine => this(g(x))
+* andThen => g(this(x))
+
+# Monoids
