@@ -179,3 +179,25 @@ __In Java__
 * andThen => g(this(x))
 
 # Monoids
+
+* Monoid = (M, +, e)
+* M = Set of elements
+* + = binary operations
+* e = identity element
+
++ reduction from left: ((((e + a) + b) + c) + d)
++ reduction from right: (a + (b + (c + (d + e))))
++ Parallel reduction: (e + a + b) + (e + c + d)
+
+# Context parameters
+
+* Slide VII, p.8
+
+# Patterns of composition
+
+* Similar or equal patterns of composition
+* Functors
+* Monads
+* Applicatives
+* Arrows
+
