@@ -201,3 +201,38 @@ __In Java__
 * Applicatives
 * Arrows
 
+## Functors
+
+* A container with elements of type T
+* with a map method
+* resulting in a Functor with elements containing R
+
++ Identity law
+    + functor.map(id) == functor with id(x) = x
++ Composite law
+    + functor.map(f * g) == functor.map(f).map(g)
+
+* Original functor and resulting functor have same structure
+
+## Monad
+
+* Functor of type A
+* with unit and flatMap methods
+
++ unit: a -> Monad\[A]
++ flatMap: Monad\[A] x (A -> Monad\[B]) -> Monad\[B]
+
+* Identity law
+    * of(x).flatMap(f) == f(x)
+* Associativity law
+    * monad.flatMap(f).flatMap(g) == monad.flatMap(x -> f(x).flatMap(g))
+    * monad.flatMap(x => f(x)).flatMap(y => g(y)) == monad.flatMap(x => f(x).flatMap(y => g(y)))
+
++ Monads are used to chain operations
++ Try
++ Future
++ Stream
++ Reactive Streams
++ Reader
++ Writer
++ State
